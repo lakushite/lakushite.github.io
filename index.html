@@ -1,10 +1,544 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>My First GitHub Pages</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lakushite | 公式サイト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lakushite（ラクシテ）は、個人事業主・フリーランスをサポートするサービスを提供しています。"
+    />
+    <style>
+      /* ====== ベーススタイル ====== */
+      :root {
+        --main-color: #2563eb; /* メインの青 */
+        --accent-color: #f59e0b; /* アクセントのオレンジ */
+        --bg-light: #f9fafb;
+        --text-main: #1f2933;
+        --text-muted: #6b7280;
+        --max-width: 960px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--text-main);
+        background-color: white;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+      }
+
+      /* ====== レイアウト共通 ====== */
+      .container {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      /* ====== ヘッダー ====== */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 16px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+      }
+
+      nav a {
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+      }
+
+      nav a:hover {
+        border-bottom-color: var(--main-color);
+      }
+
+      /* スマホ向け */
+      @media (max-width: 640px) {
+        .header-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+        }
+      }
+
+      /* ====== メインビジュアル（ヒーロー） ====== */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #eff6ff 0%,
+          #ffffff 40%,
+          #fff7ed 100%
+        );
+        padding: 56px 0 48px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .hero-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .hero-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+        color: var(--text-muted);
+        max-width: 560px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background-color: var(--main-color);
+        color: white;
+        border-color: var(--main-color);
+      }
+
+      .btn-primary:hover {
+        opacity: 0.9;
+      }
+
+      .btn-outline {
+        background-color: white;
+        color: var(--main-color);
+        border-color: var(--main-color);
+      }
+
+      .btn-outline:hover {
+        background-color: #eff6ff;
+      }
+
+      /* ====== 各セクション 共通 ====== */
+      section {
+        padding: 48px 0;
+      }
+
+      section:nth-of-type(odd) {
+        background-color: var(--bg-light);
+      }
+
+      .section-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+
+      .section-lead {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+
+      /* ====== サービス ====== */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+      }
+
+      .service-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid #e5e7eb;
+      }
+
+      .service-card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .service-card p {
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      /* ====== プロフィール ====== */
+      .profile-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: 24px;
+        align-items: flex-start;
+      }
+
+      .profile-name {
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .profile-role {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 12px;
+      }
+
+      .profile-text {
+        font-size: 14px;
+        color: var(--text-main);
+      }
+
+      .profile-meta {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      @media (max-width: 768px) {
+        .profile-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ====== 会社概要 ====== */
+      .company-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      .company-table th,
+      .company-table td {
+        border-bottom: 1px solid #e5e7eb;
+        padding: 8px 0;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .company-table th {
+        width: 120px;
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+
+      /* ====== お問い合わせ ====== */
+      .contact-note {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 12px;
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 12px;
+        max-width: 520px;
+      }
+
+      .contact-form label {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 14px;
+        border-radius: 6px;
+        border: 1px solid #d1d5db;
+        font-family: inherit;
+      }
+
+      .contact-form textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .contact-form button {
+        justify-self: flex-start;
+      }
+
+      /* ====== フッター ====== */
+      footer {
+        border-top: 1px solid #e5e7eb;
+        padding: 16px 0;
+        font-size: 12px;
+        color: var(--text-muted);
+        background-color: #f9fafb;
+      }
+
+      footer .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      /* ====== スムーススクロール ====== */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= ヘッダー ================= -->
+    <header>
+      <div class="container header-inner">
+        <div class="logo">Lakushite</div>
+        <nav>
+          <ul>
+            <li><a href="#hero">ホーム</a></li>
+            <li><a href="#services">サービス</a></li>
+            <li><a href="#profile">プロフィール</a></li>
+            <li><a href="#company">会社概要</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= メインビジュアル ================= -->
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <div>
+            <div class="hero-title">
+              個人事業・スモールビジネスの<span style="color: var(--accent-color)"
+                >「ラクして続けられる仕組み」</span
+              >づくりをサポート
+            </div>
+            <p class="hero-subtitle">
+              Lakushite（ラクシテ）は、〇〇や△△などのサービスを通じて、
+              日々の業務をもっとラクに、もっとシンプルにするお手伝いをしています。
+              あなたの事業フェーズや課題に合わせて、ちょうどいい形で伴走します。
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary">お問い合わせはこちら</a>
+              <a href="#services" class="btn-outline">サービスを見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= サービス ================= -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">サービス</h2>
+          <p class="section-lead">
+            Lakushite が提供している主なサービスの一例です。
+            実際の内容は、あなたの事業に合わせて自由に書き換えてください。
+          </p>
+
+          <div class="services">
+            <div class="service-card">
+              <h3>サービスA：〇〇支援</h3>
+              <p>
+                ここに具体的なサービス内容を書きます。例えば、オンラインでの相談、
+                企画・設計のサポート、資料作成など。対象となるお客様像も一緒に書くと分かりやすくなります。
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>サービスB：△△制作</h3>
+              <p>
+                ここに制作系サービスの説明を書きます。納品物のイメージや、
+                納期の目安・進め方などを簡単に記載しておくと安心感につながります。
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>サービスC：継続サポート / 顧問</h3>
+              <p>
+                継続的なサポートや顧問契約がある場合は、ここで「月額プラン」「定期ミーティング」などを紹介します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= プロフィール ================= -->
+      <section id="profile">
+        <div class="container">
+          <h2 class="section-title">プロフィール</h2>
+          <p class="section-lead">
+            代表者の簡単な自己紹介・経歴・大事にしている価値観などを記載します。
+            顔写真を載せる場合は、別途画像ファイルを追加して表示できます。
+          </p>
+
+          <div class="profile-layout">
+            <div>
+              <div class="profile-name">Lakushite 代表 ○○ ○○（ふりがな）</div>
+              <div class="profile-role">肩書き（例：〇〇コンサルタント / クリエイター）</div>
+              <div class="profile-text">
+                <p>
+                  ここに自己紹介文を書きます。これまでの経歴や、どのようなお客様をサポートしているか、
+                  なぜこの仕事をしているのか、などを1〜3段落程度で書くと読みやすくなります。
+                </p>
+                <p>
+                  「仕事へのスタンス」「大切にしていること」「得意なこと」などを短い文章でまとめると、
+                  あなたの人柄や価値観が伝わりやすくなります。
+                </p>
+              </div>
+            </div>
+            <div class="profile-meta">
+              <strong>得意なこと・キーワード例</strong>
+              <ul>
+                <li>キーワード1（例：業務整理 / 自動化 / システム化）</li>
+                <li>キーワード2（例：情報整理 / ドキュメント作成）</li>
+                <li>キーワード3（例：オンラインツール活用）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 会社概要 ================= -->
+      <section id="company">
+        <div class="container">
+          <h2 class="section-title">会社概要</h2>
+          <p class="section-lead">
+            個人事業主としての基本情報を掲載します。住所や連絡方法は、
+            公開範囲に応じて調整してください。
+          </p>
+
+          <table class="company-table">
+            <tbody>
+              <tr>
+                <th>屋号</th>
+                <td>Lakushite（ラクシテ）</td>
+              </tr>
+              <tr>
+                <th>事業形態</th>
+                <td>個人事業主</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>〇〇県〇〇市（詳しい住所を載せるかはお好みで調整）</td>
+              </tr>
+              <tr>
+                <th>代表者</th>
+                <td>○○ ○○</td>
+              </tr>
+              <tr>
+                <th>事業内容</th>
+                <td>ここに主な事業内容を1〜3行で記載します。</td>
+              </tr>
+              <tr>
+                <th>設立</th>
+                <td>20XX年X月</td>
+              </tr>
+              <tr>
+                <th>連絡先</th>
+                <td>info@example.com（実際に利用するメールアドレスに変更）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= お問い合わせ ================= -->
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">お問い合わせ</h2>
+          <p class="section-lead">
+            お仕事のご相談・ご質問などは、下記フォームよりお気軽にご連絡ください。
+          </p>
+
+          <p class="contact-note">
+            ※ このフォームの送信先（Formspree の設定など）は、後のステップで設定します。<br />
+            ※ 現時点では「見た目だけのフォーム」として動作させておきます。
+          </p>
+
+          <form class="contact-form" action="#" method="post">
+            <div>
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="name" placeholder="例）山田 太郎" />
+            </div>
+            <div>
+              <label for="email">メールアドレス</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="例）example@example.com"
+              />
+            </div>
+            <div>
+              <label for="message">お問い合わせ内容</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="ご相談内容・ご質問などをご記入ください。"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary">送信する（ダミー）</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= フッター ================= -->
+    <footer>
+      <div class="container">
+        <div>© <span id="year"></span> Lakushite</div>
+        <div>Powered by GitHub Pages</div>
+      </div>
+    </footer>
+
+    <script>
+      // フッターの年号を自動で現在年にする
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+    </script>
+  </body>
 </html>
