@@ -399,6 +399,27 @@
     margin: 0 auto;
   }
       }
+
+      /* ==== PCとスマホで別々の改行を管理 ==== */
+/* PC専用の改行 → スマホでは非表示 */
+.br-pc {
+  display: inline;
+}
+
+.br-sp {
+  display: none;
+}
+
+/* スマホ(768px以下)では逆転 */
+@media (max-width: 768px) {
+  .br-pc {
+    display: none;
+  }
+
+  .br-sp {
+    display: inline;
+  }
+}
     </style>
   </head>
   <body>
