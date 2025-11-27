@@ -535,3 +535,8 @@ nav ul {
     gap: 30px;
   }
 }
+
+/* about：プロフィール見出しと代表名の間の余白を広げる */
+#profile .section-lead {
+  margin-bottom: 40px;
+}
