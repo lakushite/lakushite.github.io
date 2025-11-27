@@ -496,3 +496,41 @@ nav ul {
 .center-text {
   text-align: center;
 }
+
+/* ================================
+   about.html 専用：プロフィール 2カラム
+================================ */
+
+/* 紹介文（横いっぱい） */
+.profile-intro {
+  margin-bottom: 40px;
+}
+
+/* 2カラム全体 */
+.profile-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* 左右カラム */
+.profile-left,
+.profile-right {
+  flex: 1;
+}
+
+/* 見出しデザイン */
+.profile-left h3,
+.profile-right h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* スマホ（幅768px以下）は縦並び */
+@media screen and (max-width: 768px) {
+  .profile-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
