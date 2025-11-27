@@ -549,3 +549,9 @@ nav ul {
 .profile-right {
   padding-left: 10px;
 }
+
+/* about：プロフィール本文の文字サイズを経歴と揃える */
+.profile-text p {
+  font-size: 16px;
+  line-height: 1.7;   /* 読みやすさのため行間も調整 */
+}
