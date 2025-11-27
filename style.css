@@ -93,6 +93,17 @@
         border-bottom-color: var(--main-color);
       }
 
+/* ====== ナビゲーションの文字サイズ・太さ ====== */
+nav a {
+  font-size: 16px;      /* ★ 標準14px → 16pxへ */
+  font-weight: 600;     /* ★ 太字 */
+}
+
+nav ul {
+  gap: 20px;            /* ★ 間隔を少し広げる（見やすさUP） */
+}
+
+
       /* スマホ向け */
      @media (max-width: 640px) {
   .header-inner {
