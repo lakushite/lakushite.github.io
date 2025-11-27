@@ -540,3 +540,8 @@ nav ul {
 #profile .section-lead {
   margin-bottom: 40px;
 }
+
+/* about：右カラムを少し右へ寄せる */
+.profile-right {
+  padding-left: 10px;
+}
