@@ -90,7 +90,7 @@
       }
 
       nav a:hover {
-        border-bottom-color: var(--main-color);
+        border-bottom-color: var(--accent-color); /* オレンジ */
       }
 
 /* ====== ナビゲーションの文字サイズ・太さ ====== */
