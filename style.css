@@ -484,3 +484,8 @@ nav ul {
   display: inline-block;
   cursor: pointer;
 }
+
+/* about 用：中央寄せテキスト */
+.center-text {
+  text-align: center;
+}
