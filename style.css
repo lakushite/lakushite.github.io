@@ -485,6 +485,13 @@ nav ul {
   cursor: pointer;
 }
 
+/* about プロフィール説明文（PCで中央寄せを最優先） */
+@media (min-width: 769px) {
+  #profile .section-lead.center-text {
+    text-align: center !important;
+  }
+}
+
 /* about 用：中央寄せテキスト */
 .center-text {
   text-align: center;
