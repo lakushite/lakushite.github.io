@@ -1,5 +1,4 @@
-  <style>
-      /* ====== ベーススタイル ====== */
+  /* ====== ベーススタイル ====== */
       :root {
         --main-color: #2563eb; /* メインの青 */
         --accent-color: #f59e0b; /* アクセントのオレンジ */
@@ -451,4 +450,3 @@
   display: inline-block;
   cursor: pointer;
 }
-    </style>
