@@ -510,14 +510,18 @@ nav ul {
 /* 2カラム全体 */
 .profile-columns {
   display: flex;
-  gap: 60px;
+  gap: 80px;        /* カラム間の余白を大きめに */
   margin-top: 40px;
 }
 
-/* 左右カラム */
-.profile-left,
+/* 左右カラムの幅バランス */
+.profile-left {
+  flex: 1.6;        /* 左を広めに：経歴が折り返しにくくなる */
+}
+
 .profile-right {
-  flex: 1;
+  flex: 0.9;        /* 右を少し狭めに */
+  padding-left: 20px; /* 右カラムを少し右へ寄せる */
 }
 
 /* 見出しデザイン */
