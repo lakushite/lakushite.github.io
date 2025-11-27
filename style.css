@@ -446,6 +446,29 @@
   border: none;
 }
 
+/* ====== 固定ページ用（お問い合わせなど） ====== */
+.page-hero {
+  padding: 40px 0 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb; /* いらなければ消してOK（薄いグレー背景） */
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;   /* ★ タイトルだけ中央寄せ */
+  margin-bottom: 12px;
+}
+
+.page-lead {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;       /* ブロックを中央に寄せる */
+  text-align: left;     /* ★ 文章自体は左寄せのまま */
+  line-height: 1.9;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
