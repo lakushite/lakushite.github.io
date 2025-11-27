@@ -435,4 +435,20 @@
         #contact .section-lead {
           text-align: left;
         }
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #fff;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+}
     </style>
