@@ -500,6 +500,13 @@ padding-bottom: 40px;
   line-height: 1.9;
 }
 
+.coming-soon-box {
+  font-size: 1.3rem;
+  padding: 60px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
