@@ -678,7 +678,7 @@ padding-bottom: 40px;
         rgba(255, 255, 255, 0.95),
         rgba(255, 255, 255, 0.95)
       );
-    padding-bottom: 24px;   /* 下余白。多ければ 20px にしてもOK */
+    padding-bottom: 40px;   /* 下余白。多ければ 20px にしてもOK */
   }
 
   .hero-inner {
