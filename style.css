@@ -687,15 +687,9 @@ padding-bottom: 40px;
   }
 }
 
-/* ================= スマホ用：ヒーローの高さと余白を調整 ================= */
+/* ================= スマホ用：ヒーロー余白を絶対に上書き ================= */
 @media (max-width: 768px) {
-  .hero-inner {
-    min-height: auto;      /* 80vh を解除して中身の高さに合わせる */
-    margin-top: 60px;      /* 必要なら 40〜80px くらいで微調整OK */
-  }
-
-  .hero {
-    padding-bottom: 24px;  
+  body .hero {
+    padding-bottom: 24px !important;
   }
 }
-
