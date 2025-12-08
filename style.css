@@ -138,10 +138,36 @@ nav ul {
       }
 
       .hero-inner {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between; /* 上：ロゴ／下：文章に近い配置 */
+  min-height: 100%;
+  text-align: center;
+}
+
+.hero-logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.hero-logo {
+  max-width: 320px;   /* ロゴの最大サイズ */
+  width: 60%;         /* 画面幅に対する目安 */
+  min-width: 220px;
+  height: auto;
+}
+
+.hero-text-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
 
       .hero-title {
         font-size: 28px;
