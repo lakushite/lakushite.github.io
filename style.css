@@ -150,7 +150,13 @@ nav ul {
 
 .hero-text-area {
   max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left; /* ← 文章を左揃え */
 }
+
 
       .hero-title {
         font-size: 28px;
