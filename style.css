@@ -686,3 +686,16 @@ padding-bottom: 40px;
     padding-bottom: 10px;  /* ← 好みで 0〜20px に調整OK */
   }
 }
+
+/* ================= スマホ用：ヒーローの高さと余白を調整 ================= */
+@media (max-width: 768px) {
+  .hero-inner {
+    min-height: auto;      /* 80vh を解除して中身の高さに合わせる */
+    margin-top: 60px;      /* 必要なら 40〜80px くらいで微調整OK */
+  }
+
+  .hero {
+    padding-bottom: 10px;  /* 下の余白を 10px に縮める（0〜20で好み調整） */
+  }
+}
+
