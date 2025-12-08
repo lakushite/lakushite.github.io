@@ -127,8 +127,8 @@ nav ul {
   background:
     url("ChatGPT Image 2025年12月8日 10_29_50.png") center / cover no-repeat,
     linear-gradient(
-      rgba(255, 255, 255, 0.85),   /* ← ここを白85% にして背景ロゴを薄くする */
-      rgba(255, 255, 255, 0.85)
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
     );
 
   padding: 40px 0;
