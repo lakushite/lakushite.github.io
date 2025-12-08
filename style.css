@@ -101,6 +101,10 @@ nav ul {
   gap: 20px;            /* ★ 間隔を少し広げる（見やすさUP） */
 }
 
+/* 現在表示中のページ用（サンプルなど） */
+nav ul li a.active {
+  border-bottom: 2px solid var(--accent-color);
+}
 
       /* スマホ向け */
      @media (max-width: 640px) {
