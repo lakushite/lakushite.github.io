@@ -124,14 +124,11 @@ nav ul {
 
    /* ====== メインビジュアル（ヒーロー） ====== */
 .hero {
-  /* 背景ロゴ ＋ グラデーション */
   background:
     url("ChatGPT Image 2025年12月8日 10_29_50.png") center / cover no-repeat,
     linear-gradient(
-      135deg,
-      #eff6ff 0%,
-      #ffffff 40%,
-      #fff7ed 100%
+      rgba(255, 255, 255, 0.85),   /* ← ここを白85% にして背景ロゴを薄くする */
+      rgba(255, 255, 255, 0.85)
     );
 
   padding: 40px 0;
