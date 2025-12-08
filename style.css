@@ -630,3 +630,76 @@ padding-bottom: 40px;
   }
 }
 
+/* ================= ハンバーガーメニュー共通 ================= */
+.nav-toggle {
+  display: none;               /* PCでは非表示（スマホだけ表示） */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: #111827;   /* 濃いグレー（サイトの文字色と近い） */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ナビ全体 */
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 32px;
+}
+
+/* ================= 768px以下（スマホ） ================= */
+@media (max-width: 768px) {
+  .header-inner {
+    position: relative;
+  }
+
+  /* スマホではロゴ + ハンバーガーを横並び */
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ハンバーガーを表示 */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* メニューはデフォルト非表示 */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 8px 16px 12px;
+    display: none;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 6px 0;
+  }
+
+  /* JSで .open クラスが付いたら表示 */
+  .nav-menu.open {
+    display: block;
+  }
+}
