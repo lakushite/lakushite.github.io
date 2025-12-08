@@ -134,6 +134,7 @@ nav ul {
         );
         padding: 56px 0 48px;
         border-bottom: 1px solid #e5e7eb;
+        min-height: 100vh;
       }
 
       .hero-inner {
