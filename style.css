@@ -695,7 +695,7 @@ padding-bottom: 40px;
   }
 
   .hero {
-    padding-bottom: 10px;  /* 下の余白を 10px に縮める（0〜20で好み調整） */
+    padding-bottom: 24px;  
   }
 }
 
