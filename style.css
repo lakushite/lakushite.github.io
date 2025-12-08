@@ -593,3 +593,40 @@ padding-bottom: 40px;
   width: calc(50% - 10px);  /* 2列になる */
   box-sizing: border-box;
 }
+
+/* ================= スマホ用ヘッダー調整 ================= */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 0;
+  }
+
+  .header-inner {
+    flex-direction: column;  /* ロゴの下にナビを縦に並べる */
+    align-items: center;
+  }
+
+  .logo img {
+    height: 40px;           /* ロゴを少しだけ小さめに整える（好みで調整OK） */
+  }
+
+  nav {
+    margin-top: 8px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; /* ナビを縦並び */
+    align-items: center;
+    gap: 4px;               /* 各メニューの間隔 */
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  nav a {
+    font-size: 15px;        /* 少し小さくして折り返し防止 */
+    white-space: nowrap;    /* 「Lakushiteについて」が途中で改行されないようにする */
+  }
+}
+
