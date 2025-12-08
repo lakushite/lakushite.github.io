@@ -131,7 +131,8 @@ nav ul {
       rgba(255, 255, 255, 0.95)
     );
 
-  padding: 16px 0;
+  padding-top: 0;
+padding-bottom: 40px;
   border-bottom: 1px solid #e5e7eb;
 }
 
