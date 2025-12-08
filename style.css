@@ -679,3 +679,10 @@ padding-bottom: 40px;
       );
   }
 }
+
+/* ================= スマホ用：ヒーロー下の余白を減らす ================= */
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 10px;  /* ← 好みで 0〜20px に調整OK */
+  }
+}
