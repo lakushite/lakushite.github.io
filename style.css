@@ -680,16 +680,22 @@ padding-bottom: 40px;
   }
 }
 
-/* ================= スマホ用：ヒーロー下の余白を減らす ================= */
+/* ===== スマホ用：ヒーローの位置＆高さ＆余白まとめ調整 ===== */
 @media (max-width: 768px) {
   .hero {
-    padding-bottom: 10px;  /* ← 好みで 0〜20px に調整OK */
-  }
-}
+    /* 背景ロゴを少し下げた位置に（35%は好みで微調整OK） */
+    background:
+      linear-gradient(
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0.95)
+      ),
+      url("ChatGPT Image 2025年12月8日 10_29_50.png") center 35% / 80% no-repeat;
 
-/* ================= スマホ用：ヒーロー余白を絶対に上書き ================= */
-@media (max-width: 768px) {
-  body .hero {
-    padding-bottom: 24px !important;
+    padding-bottom: 24px;       /* 下の余白：広すぎたら 20px, 狭ければ 28px くらいに */
+  }
+
+  .hero-inner {
+    min-height: auto !important;  /* 80vh をスマホだけ完全に無効化 */
+    margin-top: 40px;             /* タイトルとロゴの距離用。多ければ 32px に減らす */
   }
 }
