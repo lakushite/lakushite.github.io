@@ -671,7 +671,11 @@ padding-bottom: 40px;
 /* ================= スマホ用：背景ロゴの位置調整 ================= */
 @media (max-width: 768px) {
   .hero {
-    /* 背景ロゴを下にずらす（数値は好みで調整OK） */
-    background-position: center 90%;
+    background:
+      url("ChatGPT Image 2025年12月8日 10_29_50.png") center 90% / 80% no-repeat,
+      linear-gradient(
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0.95)
+      );
   }
 }
