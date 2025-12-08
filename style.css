@@ -667,3 +667,11 @@ padding-bottom: 40px;
     display: block;
   }
 }
+
+/* ================= スマホ用：背景ロゴの位置調整 ================= */
+@media (max-width: 768px) {
+  .hero {
+    /* 背景ロゴを下にずらす（数値は好みで調整OK） */
+    background-position: center 80%;
+  }
+}
