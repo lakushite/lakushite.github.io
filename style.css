@@ -122,9 +122,9 @@ nav ul {
   }
 }
 
-      /* ====== メインビジュアル（ヒーロー） ====== */
-    .hero {
-  /* 先にロゴ画像、その下にグラデーションを敷く */
+   /* ====== メインビジュアル（ヒーロー） ====== */
+.hero {
+  /* 背景ロゴ ＋ グラデーション */
   background:
     url("ChatGPT Image 2025年12月8日 10_29_50.png") center / 70% no-repeat,
     linear-gradient(
@@ -132,49 +132,24 @@ nav ul {
       #eff6ff 0%,
       #ffffff 40%,
       #fff7ed 100%
-   );
+    );
 
   padding: 40px 0;
   border-bottom: 1px solid #e5e7eb;
   min-height: 100vh;
 }
 
-}
-
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-inner {
+.hero-inner {
   display: flex;
   flex-direction: column;
-  gap: 32px;
   align-items: center;
-  justify-content: space-between; /* 上：ロゴ／下：文章に近い配置 */
+  justify-content: center; /* 文章を縦中央に */
   min-height: 100%;
   text-align: center;
 }
 
-.hero-logo-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-.hero-logo {
-  max-width: 320px;   /* ロゴの最大サイズ */
-  width: 60%;         /* 画面幅に対する目安 */
-  min-width: 220px;
-  height: auto;
-}
-
 .hero-text-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 16px;
+  max-width: 720px;
 }
 
       .hero-title {
