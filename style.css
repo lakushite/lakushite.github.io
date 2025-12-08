@@ -124,15 +124,25 @@ nav ul {
 
       /* ====== メインビジュアル（ヒーロー） ====== */
       .hero {
-        background: linear-gradient(
-          135deg,
-          #eff6ff 0%,
-          #ffffff 40%,
-          #fff7ed 100%
-        );
-        padding: 40px 0;
-        border-bottom: 1px solid #e5e7eb;
-        min-height: 100vh;
+  /* グラデーション＋背景ロゴ */
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff 0%,
+      #ffffff 40%,
+      #fff7ed 100%
+    ),
+    url("ここをあなたがアップした背景ロゴ画像のファイル名に変更.png");
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, 70%; /* 2つ目（ロゴ）の70%が目安 */
+
+  padding: 40px 0;
+  border-bottom: 1px solid #e5e7eb;
+  min-height: 100vh;
+}
+
         display: flex;
         align-items: center;
       }
