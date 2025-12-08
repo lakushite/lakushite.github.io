@@ -141,7 +141,7 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center; /* 文章を縦中央に */
-  min-height: 100vh;
+  min-height: 90vh;       /* ← ここだけ変更！ */
   text-align: center;
 }
 
