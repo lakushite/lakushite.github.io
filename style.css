@@ -123,24 +123,22 @@ nav ul {
 }
 
       /* ====== メインビジュアル（ヒーロー） ====== */
-      .hero {
-  /* グラデーション＋背景ロゴ */
+    .hero {
+  /* 先にロゴ画像、その下にグラデーションを敷く */
   background:
+    url("ChatGPT Image 2025年12月8日 10_29_50.png") center / 70% no-repeat,
     linear-gradient(
       135deg,
       #eff6ff 0%,
       #ffffff 40%,
       #fff7ed 100%
-    ),
-    url("ChatGPT Image 2025年12月8日 10_29_50.png");
-
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-size: cover, 70%; /* 2つ目（ロゴ）の70%が目安 */
+   );
 
   padding: 40px 0;
   border-bottom: 1px solid #e5e7eb;
   min-height: 100vh;
+}
+
 }
 
         display: flex;
