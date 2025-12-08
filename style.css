@@ -135,6 +135,8 @@ nav ul {
         padding: 40px 0;
         border-bottom: 1px solid #e5e7eb;
         min-height: 100vh;
+        display: flex;
+        align-items: center;
       }
 
       .hero-inner {
