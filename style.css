@@ -144,6 +144,7 @@ padding-bottom: 40px;
   min-height: 80vh;       /* ← ここだけ変更！ */
   text-align: center;
   padding-top: 40px; /* 上に少しだけ余白を足す（好みで調整OK） */
+  margin-top: 80px; /* ← 文章ブロックを下に下げる */
 }
 
 .hero-text-area {
