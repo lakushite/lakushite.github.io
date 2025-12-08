@@ -126,7 +126,7 @@ nav ul {
 .hero {
   /* 背景ロゴ ＋ グラデーション */
   background:
-    url("ChatGPT Image 2025年12月8日 10_29_50.png") center / 70% no-repeat,
+    url("ChatGPT Image 2025年12月8日 10_29_50.png") center / cover no-repeat,
     linear-gradient(
       135deg,
       #eff6ff 0%,
