@@ -697,6 +697,6 @@ padding-bottom: 40px;
 
 @media (max-width: 768px) {
   header {
-    padding-top: 16px;  /* ロゴを少し下に下げる。足りなければ20〜24pxにしてもOK */
+    padding-top: 20px;  /* ロゴを少し下に下げる。足りなければ20〜24pxにしてもOK */
   }
 }
