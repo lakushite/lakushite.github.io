@@ -704,7 +704,7 @@ padding-bottom: 40px;
   .header-inner {
     padding-top: 0;
     padding-bottom: 0;
-    min-height: 48px;  /* ★ 高さを固定して余白を出さない */
+    min-height: 30px;  /* ★ 高さを固定して余白を出さない */
   }
 
   .logo img {
