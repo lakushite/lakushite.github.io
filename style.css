@@ -690,7 +690,7 @@ padding-bottom: 40px;
 
   .hero-inner {
     min-height: auto;
-    margin-top: 40px;     /* ★ 全ページ共通でここだけで上余白を管理 */
+    margin-top: 120px;     /* ★ 全ページ共通でここだけで上余白を管理 */
     padding-bottom: 80px;
   }
 }
