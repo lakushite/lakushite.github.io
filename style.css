@@ -649,26 +649,16 @@ padding-bottom: 40px;
   }
 }
 
-/* ================= 768px以下（スマホ） ヘッダーまとめ ================= */
+/* ================= 768px以下（スマホ） ハンバーガー＋ロゴ位置調整 ================= */
 @media (max-width: 768px) {
-  header {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+  /* ロゴや header-inner の padding は PC と同じまま */
 
-  .header-inner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4px 16px;   /* ← 上下の余白（4pxが狭め。まだ広ければ2pxとかでもOK） */
-  }
-
-  /* ロゴ画像をスマホでは少し小さくして、ヘッダーの高さを抑える */
+  /* ロゴだけ少し下にずらす（余白の大きさは変えない） */
   .logo img {
-    height: 40px;   /* 元は52px。もっと詰めたければ 36px とかにしてもOK */
+    height: 52px;              /* 元のサイズに戻す */
     width: auto;
     display: block;
+    transform: translateY(6px);  /* ← ここでロゴの位置だけ下げる。数字は好みで調整可 */
   }
 
   /* ハンバーガーを表示 */
@@ -689,6 +679,7 @@ padding-bottom: 40px;
   }
 
   .nav-menu ul {
+    display: flex;
     flex-direction: column;
     gap: 8px;
   }
@@ -698,7 +689,6 @@ padding-bottom: 40px;
     padding: 6px 0;
   }
 
-  /* JSで .open クラスが付いたら表示 */
   .nav-menu.open {
     display: block;
   }
