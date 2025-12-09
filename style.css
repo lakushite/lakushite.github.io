@@ -622,17 +622,53 @@ padding-bottom: 40px;
   gap: 32px;
 }
 
-/* ================= 768px以下（スマホ） ================= */
+/* サービスページのサブタイトルを左寄せ */
+.subtitle-left {
+  text-align: left !important;
+  margin-left: 0;
+}
+
+/* ===== スマホ用：ヒーローの位置＆余白（統一版） ===== */
 @media (max-width: 768px) {
-  .header-inner {
-    position: relative;
+  .hero {
+    background:
+      url("ChatGPT Image 2025年12月8日 10_29_50.png") center 35% / 80% no-repeat,
+      linear-gradient(
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0.95)
+      );
+    padding-top: 0;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #e5e7eb;
   }
 
-  /* スマホではロゴ + ハンバーガーを横並び */
+  .hero-inner {
+    min-height: auto;
+    margin-top: 120px;     /* ★ 全ページ共通でここだけで上余白を管理 */
+    padding-bottom: 80px;
+  }
+}
+
+/* ================= 768px以下（スマホ） ヘッダーまとめ ================= */
+@media (max-width: 768px) {
+  header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .header-inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 4px 16px;   /* ← 上下の余白（4pxが狭め。まだ広ければ2pxとかでもOK） */
+  }
+
+  /* ロゴ画像をスマホでは少し小さくして、ヘッダーの高さを抑える */
+  .logo img {
+    height: 40px;   /* 元は52px。もっと詰めたければ 36px とかにしてもOK */
+    width: auto;
+    display: block;
   }
 
   /* ハンバーガーを表示 */
@@ -665,49 +701,5 @@ padding-bottom: 40px;
   /* JSで .open クラスが付いたら表示 */
   .nav-menu.open {
     display: block;
-  }
-}
-
-/* サービスページのサブタイトルを左寄せ */
-.subtitle-left {
-  text-align: left !important;
-  margin-left: 0;
-}
-
-/* ===== スマホ用：ヒーローの位置＆余白（統一版） ===== */
-@media (max-width: 768px) {
-  .hero {
-    background:
-      url("ChatGPT Image 2025年12月8日 10_29_50.png") center 35% / 80% no-repeat,
-      linear-gradient(
-        rgba(255, 255, 255, 0.95),
-        rgba(255, 255, 255, 0.95)
-      );
-    padding-top: 0;
-    padding-bottom: 80px;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .hero-inner {
-    min-height: auto;
-    margin-top: 120px;     /* ★ 全ページ共通でここだけで上余白を管理 */
-    padding-bottom: 80px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .header-inner {
-    padding-top: 0;
-    padding-bottom: 0;
-    min-height: 30px;  /* ★ 高さを固定して余白を出さない */
-  }
-
-  .logo img {
-    margin-top: 6px;   /* ★ ロゴだけ微調整（必要なら変更OK） */
   }
 }
