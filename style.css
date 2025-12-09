@@ -700,3 +700,9 @@ padding-bottom: 40px;
     padding-top: 24px;  /* ロゴを少し下に下げる。足りなければ20〜24pxにしてもOK */
   }
 }
+
+@media (max-width: 768px) {
+  .logo img {
+    margin-top: 12px;   /* ★ ロゴだけを下にずらす。好みに応じて 8〜20px 調整可 */
+  }
+}
