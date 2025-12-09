@@ -668,7 +668,13 @@ padding-bottom: 40px;
   }
 }
 
-/* ===== スマホ用：ヒーローの位置＆余白（最終版） ===== */
+/* サービスページのサブタイトルを左寄せ */
+.subtitle-left {
+  text-align: left !important;
+  margin-left: 0;
+}
+
+/* ===== スマホ用：ヒーローの位置＆余白（統一版） ===== */
 @media (max-width: 768px) {
   .hero {
     background:
@@ -678,62 +684,13 @@ padding-bottom: 40px;
         rgba(255, 255, 255, 0.95)
       );
     padding-top: 0;
-    padding-bottom: 80px;  /* ★ スマホの下の余白はここでだけ管理する */
+    padding-bottom: 80px;
     border-bottom: 1px solid #e5e7eb;
   }
 
   .hero-inner {
-    min-height: auto;  /* 80vh は解除 */
-    margin-top: 40px;  /* 上の余白。必要ならあとでここだけ微調整 */
-  }
-}
-
-/* サービスページのサブタイトルを左寄せ */
-.subtitle-left {
-  text-align: left !important;
-  margin-left: 0;
-}
-
-/* ★ スマホ時、hero-inner の高さを完全に解除する（最優先ルール） */
-@media (max-width: 768px) {
-  .hero-inner {
-    min-height: auto !important;
-    margin-top: 20px !important; /* 必要なら後で調整 */
-  }
-}
-
-/* ★ スマホ専用：hero-inner の下に余白を足す（決定版） */
-@media (max-width: 768px) {
-  .hero-inner {
-    min-height: auto !important;      /* 80vh を完全に無効化 */
-    margin-top: 120px !important;      /* 上はほどほど */
-    padding-bottom: 80px !important;  /* 下にしっかり余白をつける */
-  }
-}
-
-/* aboutページ専用：スマホのヒーロー余白をそろえる */
-@media (max-width: 768px) {
-  .about-page #hero.hero-about {
-    padding-top: 0;
-    padding-bottom: 80px;   /* 他ページと同じくらいの下余白 */
-  }
-
-  .about-page #hero.hero-about .hero-inner {
-    margin-top: 40px !important;    /* 上の余白をサービス/トップと同じくらいに */
-    padding-bottom: 0 !important;   /* 二重の下余白を防ぐ */
-  }
-}
-
-/* aboutページ専用：スマホ時のヒーロー余白を調整（最優先） */
-@media (max-width: 768px) {
-  .about-page .hero {
-    padding-top: 0 !important;
-    padding-bottom: 80px !important;
-  }
-
-  .about-page .hero-inner {
-    min-height: auto !important;
-    margin-top: 120px !important;      /* ← 40px → 120px に変更 */
-    padding-bottom: 80px !important;   /* ← 0px → 80px に変更 */
+    min-height: auto;
+    margin-top: 40px;     /* ★ 全ページ共通でここだけで上余白を管理 */
+    padding-bottom: 0;
   }
 }
