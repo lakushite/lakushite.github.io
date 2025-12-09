@@ -711,11 +711,11 @@ padding-bottom: 40px;
   }
 }
 
-/* ================= about.html 専用：ヒーロー余白調整（スマホ） ================= */
+/* ================= about.html専用：ヒーロー余白調整 ================= */
 @media (max-width: 768px) {
-  body.about-page .hero-inner {
-    min-height: auto !important;      /* 80vh を完全無効化 */
-    margin-top: 120px !important;      /* 上の余白：今のトップページと同じくらい */
-    padding-bottom: 80px !important;  /* 下の余白：しっかりめに確保 */
+  .hero-about .hero-inner {
+    min-height: auto !important;      /* 80vh を完全に無効化 */
+    margin-top: 120px !important;      /* 上の余白（好みで 30〜50px 調整OK） */
+    padding-bottom: 80px !important;  /* 下の余白（好みで 60px などに調整OK） */
   }
 }
