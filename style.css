@@ -710,3 +710,10 @@ padding-bottom: 40px;
     padding-bottom: 80px !important;  /* 下にしっかり余白をつける */
   }
 }
+
+/* about.html の hero 余白を index と揃える */
+@media (max-width: 768px) {
+  .hero-about .hero-inner {
+    margin-top: 80px !important;  /* ← index と同じにする */
+  }
+}
