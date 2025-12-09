@@ -668,22 +668,23 @@ padding-bottom: 40px;
   }
 }
 
-/* ===== スマホ用：ヒーローの位置＆高さ＆余白まとめ調整 ===== */
+/* ===== スマホ用：ヒーローの位置＆余白（最終版） ===== */
 @media (max-width: 768px) {
   .hero {
-    /* 画像 → グラデーション の順番にしてロゴを上に表示 */
     background:
       url("ChatGPT Image 2025年12月8日 10_29_50.png") center 35% / 80% no-repeat,
       linear-gradient(
         rgba(255, 255, 255, 0.95),
         rgba(255, 255, 255, 0.95)
       );
-    padding-bottom: 80px;   /* 下余白。多ければ 20px にしてもOK */
+    padding-top: 0;
+    padding-bottom: 24px;  /* ★ スマホの下の余白はここでだけ管理する */
+    border-bottom: 1px solid #e5e7eb;
   }
 
   .hero-inner {
-    min-height: auto;   /* スマホでは80vhを解除 */
-    margin-top: 40px;   /* 見ながら30〜50pxで微調整OK */
+    min-height: auto;  /* 80vh は解除 */
+    margin-top: 40px;  /* 上の余白。必要ならあとでここだけ微調整 */
   }
 }
 
@@ -692,19 +693,3 @@ padding-bottom: 40px;
   text-align: left !important;
   margin-left: 0;
 }
-
-/* ===== スマホ確認用：hero の範囲を赤枠で表示 ===== */
-@media (max-width: 768px) {
-  #hero {
-    outline: 2px solid red;
-  }
-}
-
-/* ===== スマホ確認用：hero の範囲と下余白をテスト ===== */
-@media (max-width: 768px) {
-  .hero {
-    outline: 2px solid red;      /* どこまでが hero か目で確認する用 */
-    margin-bottom: 80px;         /* とりあえず極端に下に余白を足す */
-  }
-}
-
