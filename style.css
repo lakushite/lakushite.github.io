@@ -678,7 +678,7 @@ padding-bottom: 40px;
         rgba(255, 255, 255, 0.95),
         rgba(255, 255, 255, 0.95)
       );
-    padding-bottom: 40px;   /* 下余白。多ければ 20px にしてもOK */
+    padding-bottom: 80px;   /* 下余白。多ければ 20px にしてもOK */
   }
 
   .hero-inner {
@@ -691,11 +691,4 @@ padding-bottom: 40px;
 .subtitle-left {
   text-align: left !important;
   margin-left: 0;
-}
-
-/* ================= スマホ専用：ヒーロー下の余白を増やす ================= */
-@media (max-width: 768px) {
-  body .hero {
-    padding-bottom: 72px !important;  /* ← まずはこのくらい余裕を持たせる */
-  }
 }
