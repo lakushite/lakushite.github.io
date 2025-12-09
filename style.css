@@ -693,3 +693,11 @@ padding-bottom: 40px;
   text-align: left !important;
   margin-left: 0;
 }
+
+/* ★ スマホ時、hero-inner の高さを完全に解除する（最優先ルール） */
+@media (max-width: 768px) {
+  .hero-inner {
+    min-height: auto !important;
+    margin-top: 20px !important; /* 必要なら後で調整 */
+  }
+}
