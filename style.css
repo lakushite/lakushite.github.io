@@ -686,3 +686,9 @@ padding-bottom: 40px;
     margin-top: 40px;   /* 見ながら30〜50pxで微調整OK */
   }
 }
+
+/* サービスページのサブタイトルを左寄せ */
+.subtitle-left {
+  text-align: left !important;
+  margin-left: 0;
+}
