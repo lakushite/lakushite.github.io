@@ -733,7 +733,7 @@ padding-bottom: 40px;
 
   .about-page .hero-inner {
     min-height: auto !important;
-    margin-top: 40px !important;     /* ← 上の余白をサービス・トップと同じくらいに */
-    padding-bottom: 0 !important;    /* ← 余計な下余白を消す */
+    margin-top: 120px !important;      /* ← 40px → 120px に変更 */
+    padding-bottom: 80px !important;   /* ← 0px → 80px に変更 */
   }
 }
