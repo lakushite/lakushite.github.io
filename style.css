@@ -710,12 +710,3 @@ padding-bottom: 40px;
     padding-bottom: 80px !important;  /* 下にしっかり余白をつける */
   }
 }
-
-/* ================= about.html専用：ヒーロー余白調整 ================= */
-@media (max-width: 768px) {
-  .hero-about .hero-inner {
-    min-height: auto !important;      /* 80vh を完全に無効化 */
-    margin-top: 120px !important;      /* 上の余白（好みで 30〜50px 調整OK） */
-    padding-bottom: 80px !important;  /* 下の余白（好みで 60px などに調整OK） */
-  }
-}
