@@ -699,3 +699,12 @@ padding-bottom: 40px;
     outline: 2px solid red;
   }
 }
+
+/* ===== スマホ確認用：hero の範囲と下余白をテスト ===== */
+@media (max-width: 768px) {
+  .hero {
+    outline: 2px solid red;      /* どこまでが hero か目で確認する用 */
+    margin-bottom: 80px;         /* とりあえず極端に下に余白を足す */
+  }
+}
+
