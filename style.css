@@ -696,7 +696,8 @@ padding-bottom: 40px;
 }
 
 @media (max-width: 768px) {
-  .logo img {
-    margin-top: 8px;   /* ロゴだけ少し下にずらす。あとで数値は微調整OK */
+  .header-inner {
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
