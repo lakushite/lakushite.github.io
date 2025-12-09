@@ -650,12 +650,11 @@ padding-bottom: 40px;
   /* ロゴや header-inner の padding は PC と同じまま */
 
   /* ロゴだけ少し下にずらす（余白の大きさは変えない） */
-  .logo img {
-    height: 52px;              /* 元のサイズに戻す */
-    width: auto;
-    display: block;
-    transform: translateY(6px);  /* ← ここでロゴの位置だけ下げる。数字は好みで調整可 */
-  }
+ .logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
 
   /* ハンバーガーを表示 */
   .nav-toggle {
