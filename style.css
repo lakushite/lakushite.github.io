@@ -692,3 +692,10 @@ padding-bottom: 40px;
   text-align: left !important;
   margin-left: 0;
 }
+
+/* ================= スマホ専用：ヒーロー下の余白を増やす ================= */
+@media (max-width: 768px) {
+  body .hero {
+    padding-bottom: 72px !important;  /* ← まずはこのくらい余裕を持たせる */
+  }
+}
