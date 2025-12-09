@@ -723,3 +723,17 @@ padding-bottom: 40px;
     padding-bottom: 0 !important;   /* 二重の下余白を防ぐ */
   }
 }
+
+/* aboutページ専用：スマホ時のヒーロー余白を調整（最優先） */
+@media (max-width: 768px) {
+  .about-page .hero {
+    padding-top: 0 !important;
+    padding-bottom: 80px !important;
+  }
+
+  .about-page .hero-inner {
+    min-height: auto !important;
+    margin-top: 40px !important;     /* ← 上の余白をサービス・トップと同じくらいに */
+    padding-bottom: 0 !important;    /* ← 余計な下余白を消す */
+  }
+}
