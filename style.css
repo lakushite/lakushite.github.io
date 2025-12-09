@@ -692,3 +692,10 @@ padding-bottom: 40px;
   text-align: left !important;
   margin-left: 0;
 }
+
+/* ===== スマホ確認用：hero の範囲を赤枠で表示 ===== */
+@media (max-width: 768px) {
+  #hero {
+    outline: 2px solid red;
+  }
+}
