@@ -711,3 +711,10 @@ padding-bottom: 40px;
     max-width: 100%;   /* 横幅を広げる */
   }
 }
+
+/* スマホ：プロフィール本文の行間を少しだけ詰める */
+@media (max-width: 768px) {
+  .profile-text p {
+    line-height: 1.5;
+  }
+}
