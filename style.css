@@ -734,3 +734,10 @@ padding-bottom: 40px;
 
   }
 }
+
+/* スマホ：プロフィール本文の段落余白を少しだけ詰める */
+@media (max-width: 768px) {
+  .profile-text p {
+    margin-bottom: 14px;  /* 通常より少し狭くする（12〜16pxが推奨） */
+  }
+}
