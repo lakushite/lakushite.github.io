@@ -718,3 +718,11 @@ padding-bottom: 40px;
     line-height: 1.5;
   }
 }
+
+/* スマホ：プロフィール文章の横幅を少し狭めて読みやすくする */
+@media (max-width: 768px) {
+  .profile-text {
+    max-width: 95%;   /* 必要に応じて 90%〜95% で調整可能 */
+    margin: 0 auto;   /* 自動で中央寄せ */
+  }
+}
