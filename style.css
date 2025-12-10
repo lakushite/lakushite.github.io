@@ -724,5 +724,13 @@ padding-bottom: 40px;
   .profile-text {
     max-width: 95%;   /* 必要に応じて 90%〜95% で調整可能 */
     margin: 0 auto;   /* 自動で中央寄せ */
+
+    /* スマホ：プロフィール上部の余白を少し増やす */
+@media (max-width: 768px) {
+  .profile-intro {
+    margin-bottom: 32px; /* デフォルトより広げる（好みで28〜40でもOK） */
+  }
+}
+
   }
 }
