@@ -774,3 +774,16 @@ padding-bottom: 40px;
     width: 90px;
   }
 }
+
+/* スマホ：aboutページのセクション余白を最適化 */
+@media (max-width: 768px) {
+  .about-page section {
+    padding-top: 36px;   /* 少し詰める：デフォルト48px → 36 */
+    padding-bottom: 40px; /* 下は若干ゆったり目で読みやすく */
+  }
+
+  /* プロフィールセクションの最上部だけ特別に詰める */
+  #profile {
+    padding-top: 28px;
+  }
+}
