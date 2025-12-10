@@ -741,3 +741,21 @@ padding-bottom: 40px;
     margin-bottom: 14px;  /* 通常より少し狭くする（12〜16pxが推奨） */
   }
 }
+
+/* スマホ：プロフィール2カラムの余白を最適化 */
+@media (max-width: 768px) {
+  .profile-columns {
+    gap: 20px; /* デフォルト30px → 少し詰めて縦の伸びを抑える */
+  }
+
+  .profile-left ul li,
+  .profile-right ul li {
+    line-height: 1.6;    /* 読みやすさは保ちつつ少し詰める */
+    margin-bottom: 10px; /* li 同士の余白も少し縮める */
+  }
+
+  /* スマホでは左右のpadding調整をリセットして中央寄せに */
+  .profile-right {
+    padding-left: 0;
+  }
+}
