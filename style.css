@@ -590,6 +590,13 @@ padding-bottom: 40px;
   box-sizing: border-box;
 }
 
+/* スマホ（768px以下）はサービスカードを1列にする */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;          /* 横幅いっぱい → 1列表示 */
+  }
+}
+
 /* ================= ハンバーガーメニュー共通 ================= */
 .nav-toggle {
   display: none;               /* PCでは非表示（スマホだけ表示） */
